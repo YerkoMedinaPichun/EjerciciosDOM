@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ejercicios del DOM</title>
+
+  <!-- Importando Fuentes -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Adjuntando Css -->
+
+  <link rel="stylesheet" href="css/dom-ejercicios.css">
+
+</head>
+
+<body>
+
+  <header class="header contenedor contenedor-titulo">
+    <h1 class="contenedor-titulo__titulo">Ejercicios Prácticos DOM</h1>
+  </header>
+  <!-- <div class="contenedor contenedor-titulo">
+    <h1 class="contenedor-titulo__titulo">Ejercicios Prácticos DOM</h1>
+  </div> -->
+
+  <nav class="nav">
+    <div id="contenedor-btn-menu" class="contenedor-icono">
+      <ion-icon id="btn-menu" class="contenedor-icono__icono" name="menu"></ion-icon>
+    </div>
+    <ul id="menu" class="menu menu--apagado">
+      <!--  -->
+      <li class="contenedor-enlace"><a class="contenedor-enlace__enlace" href="#seccion-1">Sección 1</a></li>
+      <li class="contenedor-enlace"><a class="contenedor-enlace__enlace" href="#seccion-2">Sección 2</a></li>
+      <li class="contenedor-enlace"><a class="contenedor-enlace__enlace" href="#seccion-3">Sección 3</a></li>
+      <li class="contenedor-enlace"><a class="contenedor-enlace__enlace" href="#seccion-4">Sección 4</a></li>
+      <li class="contenedor-enlace"><a class="contenedor-enlace__enlace" href="#seccion-5">Sección 5</a></li>
+    </ul>
+  </nav>
+  <main class="main">
+    <section id="seccion-1" class="section">
+      <h2 class="section__titulo">Sección 1</h2>
+    </section>
+    <section id="seccion-2" class="section">
+      <h2 class="section__titulo">Sección 2</h2>
+    </section>
+    <section id="seccion-3" class="section">
+      <h2 class="section__titulo">Sección 3</h2>
+    </section>
+    <section id="seccion-4" class="section">
+      <h2 class="section__titulo">Sección 4</h2>
+    </section>
+    <section id="seccion-5" class="section">
+      <h2 class="section__titulo">Sección 5</h2>
+    </section>
+  </main>
+
+
+
+  <script src="index_dom.js" type="module"></script>
+  <!--Iconos IonicIcons-->
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>
