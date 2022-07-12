@@ -5,25 +5,93 @@
 //contenedor-btn-menu = panelBtn, menu = panel
 export default function funcionesMenuHamburguer() {
   const d = document;
-  hamburguerMenu(d, "btn-menu", "menu", "contenedor-enlace");
+  configuracionInicial(d, "contenedor-btn-menu", "menu");
+  hamburguerMenu(d, "btn-menu", "menu", "contenedor-enlace__enlace");
+  resize(d, "contenedor-btn-menu", "btn-menu", "menu");
   // detectarAnchoPantalla(d, "contenedor-btn-menu", "btn-menu", "menu");
 }
 
 function hamburguerMenu(d, btnMenu, menu, menuLink) {
   d.addEventListener("click", (e) => {
-    if (e.target.matches(`#${btnMenu}`)) {
-      d.getElementById(btnMenu).classList.toggle("icono--encendido");
-      d.getElementById(menu).classList.toggle("menu--encendido");
-    }
+    if (window.innerWidth < 768) {
+      if (e.target.matches(`#${btnMenu}`)) {
+        d.getElementById(btnMenu).classList.toggle("icono--encendido");
+        d.getElementById(menu).classList.toggle("menu--encendido");
+      }
 
-    if (
-      e.target.matches(`.${menuLink}`) ||
-      e.target.matches(".contenedor-enlace__enlace")
-    ) {
-      d.getElementById(btnMenu).classList.remove("icono--encendido");
-      d.getElementById(menu).classList.remove("menu--encendido");
+      if (e.target.matches(`.${menuLink}`)) {
+        d.getElementById(btnMenu).classList.remove("icono--encendido");
+        d.getElementById(menu).classList.remove("menu--encendido");
+      }
+      // if (e.target.matches(".contenedor-enlace__enlace")) {
+      //   d.getElementById(btnMenu).classList.remove("icono--encendido");
+      //   d.getElementById(menu).classList.remove("menu--encendido");
+      // }
     }
   });
+}
+
+function resize(d, contenedorBtnMenu, btnMenu, menu) {
+  window.addEventListener("resize", (e) => {
+    if (window.innerWidth >= 768) {
+      /*
+        Si el dispositivo es igual o mayor a 768px entonces agregamos la clase "ocultar"
+      */
+      if (!d.getElementById(contenedorBtnMenu).classList.contains("ocultar")) {
+        d.getElementById(contenedorBtnMenu).classList.add("ocultar");
+      }
+
+      /*
+        Si el dispositivo es mayor a 768px y no posee la clase "menu--encendido", entonces se la agregamos
+      */
+      if (!d.getElementById(menu).classList.contains("menu--encendido")) {
+        d.getElementById(menu).classList.add("menu--encendido");
+      }
+    }
+
+    if (window.innerWidth < 768) {
+      /*
+        Si el dispositivo es igual o mayor a 768px entonces agregamos la clase "ocultar"
+      */
+      if (d.getElementById(contenedorBtnMenu).classList.contains("ocultar")) {
+        d.getElementById(contenedorBtnMenu).classList.remove("ocultar");
+      }
+      /*
+        Si el btnMenu No tiene la clase "icono--encendido" entonces,
+        quiere decir que el btnMenu está apagado, por lo tanto, si está apagado, compruebo si el menu está encendido. Si el btnMenu está apagado y el menu está encendido, entonces "apago el menu"
+      */
+      if (!d.getElementById(btnMenu).classList.contains("icono--encendido")) {
+        if (d.getElementById(menu).classList.contains("menu--encendido")) {
+          d.getElementById(menu).classList.remove("menu--encendido");
+        }
+      }
+      /*
+        Si el menu tiene la clase "menu--encendido" entonces,
+        quiere decir que el menu está visible, por lo tanto, si está encendido, compruebo si el btnMenu está apagado. Si el menu está encendido y el btnMenu está apagado, entonces "enciendo el icono"
+      */
+
+      if (d.getElementById(menu).classList.contains("menu--encendido")) {
+        if (!d.getElementById(btnMenu).classList.add("icono--encendido")) {
+          d.getElementById(btnMenu).classList.add("icono--encendido");
+        }
+      }
+    }
+  });
+}
+
+function configuracionInicial(d, contenedorBtnMenu, menu) {
+  if (window.innerWidth >= 768) {
+    if (!d.getElementById(contenedorBtnMenu).classList.contains("ocultar")) {
+      d.getElementById(contenedorBtnMenu).classList.add("ocultar");
+    }
+
+    /*
+        Si el dispositivo es mayor a 768px y no posee la clase "menu--encendido", entonces se la agregamos
+      */
+    if (!d.getElementById(menu).classList.contains("menu--encendido")) {
+      d.getElementById(menu).classList.add("menu--encendido");
+    }
+  }
 }
 
 //------------------------------------------------------------------------
