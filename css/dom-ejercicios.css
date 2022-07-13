@@ -152,19 +152,34 @@ body {
 }
 
 .contenedor-enlace {
-  /* padding: 1rem 2rem; */
-  width: 20rem;
-  margin: 1rem 0;
+  width: 26rem;
+  height: 6rem;
   color: var(--color-claro);
+  padding: 2rem 0;
   margin: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
-/* .contenedor-enlace .contenedor-enlace:hover .contenedor-enlace__enlace {
-  color: var(--color-blanco);
-} */
+.contenedor-enlace::before {
+  content: "";
+  position: absolute;
+  background-color: var(--color-primario);
+  width: 80%;
+  height: 0.2rem;
+  top: -2.1rem;
+}
+.contenedor-enlace:first-of-type::before {
+  content: none;
+}
 .contenedor-enlace__enlace {
-  padding: 1.8rem 4rem;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   color: var(--color-claro);
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 400;
   width: 100%;
   height: 100%;
@@ -172,6 +187,8 @@ body {
   border-radius: 3rem;
   cursor: pointer;
   text-align: center;
+  word-break: normal;
+  padding: 2.8rem;
 }
 .contenedor-enlace__enlace:hover {
   border: 1px solid var(--color-primario);
@@ -197,47 +214,13 @@ body {
   font-weight: 400;
   text-align: center;
 }
-@media (min-width: 768px) {
-  .menu {
-    flex-direction: row;
-    justify-content: center;
-  }
-  .contenedor-enlace {
-    width: 15rem;
-  }
-  .contenedor-enlace__enlace {
-    padding: 2rem 2rem;
-  }
-  .main {
-    margin-top: 8rem;
-  }
-}
+
 .ocultar {
   display: none;
 }
 
 /* Reloj Digital y Alarma Sonora */
 
-/*
-<section id="seccion-1" class="section">
-      <h2 class="section__titulo">Reloj Digital y Alarma Sonora</h2>
-      <div id="contenedor-reloj" class="contenedor-reloj">
-        <p id="reloj" class="contenedor-reloj__reloj"></p>
-        <audio id="alarma" src="assets/alarma.mp3"></audio>
-      </div>
-      <div class="botones-reloj">
-        <button id="iniciar-reloj" class="boton">Iniciar Reloj</button>
-        <button id="detener-reloj" class="boton">Detener Reloj</button>
-        <button id="iniciar-alarma" class="boton">Iniciar Alarma</button>
-        <button id="detener-alarma" class="boton">Detener Alarma</button>
-      </div>
-    </section>
-*/
-
-/* .section {
-}
-.section__titulo {
-} */
 .contenedor-reloj {
   background-color: var(--color-gris-muy-oscuro);
   border: 0.4rem solid var(--color-gris);
@@ -281,10 +264,37 @@ body {
 
 @media (min-width: 480px) {
   .contenedor-enlace__enlace {
-    font-size: 1.8rem;
+    font-size: 2.4rem;
   }
   .botones-reloj {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 560px) {
+  .contenedor-enlace__enlace {
+    font-size: 2.8rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .contenedor-enlace {
+    width: 15rem;
+    margin: 0;
+  }
+  .contenedor-enlace::before {
+    content: none;
+  }
+  .contenedor-enlace__enlace {
+    padding: 2rem 2rem;
+    font-size: 1.6rem;
+  }
+  .main {
+    margin-top: 8rem;
   }
 }
