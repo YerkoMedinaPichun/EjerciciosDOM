@@ -1,6 +1,6 @@
 import funcionesMenuHamburguer from "./dom/menu_hamburguesa.js";
 import { alarma, relojDigital } from "./dom/reloj_alarma.js";
-import { acortadores, moverBola } from "./dom/teclado.js";
+import { acortadores, funcionesEventosTeclado } from "./dom/teclado.js";
 
 const d = document;
 
@@ -8,13 +8,17 @@ d.addEventListener("DOMContentLoaded", (e) => {
   funcionesMenuHamburguer();
   relojDigital(d, "reloj", "iniciar-reloj", "detener-reloj");
   alarma(d, "alarma", "iniciar-alarma", "detener-alarma");
+  funcionesEventosTeclado(d, "contenedor-lienzo");
+  // d.addEventListener("click", (e) => {
+  //   console.log(e.target);
+  // });
 });
 
 d.addEventListener("keydown", (e) => {
   //Cuando se presiona
 
   acortadores(d, e);
-  moverBola(d, e, "contenedor-lienzo", "objeto");
+  // moverBola(d, e, "contenedor-lienzo", "objeto");
 });
 
 // d.addEventListener("keyup", (e) => {
