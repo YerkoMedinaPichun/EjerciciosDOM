@@ -256,6 +256,7 @@ body {
   font-weight: 600;
   text-shadow: 0 0 2px var(--color-primario);
   letter-spacing: 0.2rem;
+  cursor: pointer;
 }
 .boton:disabled {
   color: var(--color-gris-claro);
@@ -274,7 +275,7 @@ body {
 
 @media (min-width: 560px) {
   .contenedor-enlace__enlace {
-    font-size: 2.8rem;
+    font-size: 2.6rem;
   }
 }
 
@@ -292,9 +293,29 @@ body {
   }
   .contenedor-enlace__enlace {
     padding: 2rem 2rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
   }
   .main {
     margin-top: 8rem;
   }
+}
+
+/* Eventos del Teclado */
+
+.contenedor-lienzo {
+  width: 100%;
+  height: 25rem;
+  margin: 4rem 0;
+  background-color: var(--color-gris-muy-oscuro);
+  border: 0.4rem solid var(--color-gris);
+  position: relative;
+}
+.objeto {
+  background-color: var(--color-primario);
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: relative;
+  /* top: 1rem;
+  left: 1rem; */
 }
