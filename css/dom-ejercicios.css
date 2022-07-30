@@ -60,7 +60,7 @@ img {
 
 /* ----- Mobile First ----- */
 body {
-  background-color: var(--color-gris-muy-claro);
+  background-color: var(--color-blanco);
 }
 /* titulo */
 /* .header {
@@ -178,6 +178,7 @@ body {
   cursor: pointer;
   text-align: center;
   word-break: normal;
+  white-space: nowrap;
   padding: 2.8rem;
   transition: background-color ease 0.3s, border ease 0.3s, color ease 0.3s;
   background-color: var(--color-negro);
@@ -202,13 +203,19 @@ body {
 .section__titulo {
   text-align: center;
   font-size: 3.4rem;
-  color: var(--color-blanco);
+  color: var(--color-gris-oscuro);
   font-weight: 400;
   text-align: center;
 }
 
 .ocultar {
+  /* display none, no es animable */
   display: none;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
 }
 
 /* Reloj Digital y Alarma Sonora */
@@ -298,13 +305,14 @@ body {
 .info-eventos-teclado {
   margin: 4rem 0;
   padding: 0 1rem;
-  color: var(--color-blanco);
+  color: var(--color-gris-oscuro);
   font-weight: 400;
 }
 .info-eventos-teclado span {
   color: var(--color-primario);
   font-weight: 800;
 }
+
 .contenedor-lienzo {
   width: 100%;
   height: 25rem;
@@ -332,4 +340,166 @@ body {
   z-index: 15;
   /* top: 1rem;
   left: 1rem; */
+}
+
+/* Cuenta Regresiva */
+.contenedor-fecha {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  margin: 4rem 0;
+  color: var(--color-blanco);
+  background-color: var(--color-gris-oscuro);
+  padding: 2rem;
+}
+.fecha-label {
+  font-size: 2.4rem;
+  margin-right: 4rem;
+  grid-row: 1 / 2;
+  grid-column: 1 / 2;
+  margin: auto;
+}
+.fecha-input {
+  font-size: 2.4rem;
+  grid-row: 2 / 3;
+  grid-column: 1 / 2;
+  position: relative;
+  left: 0;
+  margin: auto;
+  width: 25rem;
+  padding: 1rem;
+}
+.boton--calcular-tiempo {
+  white-space: nowrap;
+  margin: auto 0;
+  grid-row: 3 / 4;
+  grid-column: 1 / 2;
+  margin: auto;
+}
+.tiempo {
+  font-size: 3rem;
+  grid-row: 4 / 5;
+  grid-column: 1 / 2;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .contenedor-fecha {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    background-color: var(--color-gris-oscuro);
+    padding: 2rem;
+  }
+  .fecha-label {
+    font-size: 2.4rem;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 5rem;
+    grid-row: 1 / 2;
+    grid-column: 1 / 2;
+  }
+  .fecha-input {
+    font-size: 2.4rem;
+    grid-row: 1 / 2;
+    grid-column: 2 / 3;
+    margin: 0;
+    width: 25rem;
+    padding: 1rem;
+  }
+  .boton--calcular-tiempo {
+    white-space: nowrap;
+    margin: auto;
+    grid-row: 2 / 3;
+    grid-column: 1 / 3;
+  }
+  .tiempo {
+    font-size: 3rem;
+    grid-row: 3 / 4;
+    grid-column: 1 / 3;
+  }
+}
+
+/* Boton Scroll Top */
+.scroll-top-btn {
+  background-color: var(--color-primario);
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  border: none;
+  border-radius: 50%;
+  z-index: 90;
+  box-shadow: 0 0 10px var(--color-gris-oscuro),
+    0 0 15px var(--color-gris-oscuro);
+
+  cursor: pointer;
+
+  transition: background-color ease 0.3s, box-shadow ease 0.3s,
+    opacity ease 0.3s, visibility ease 0.3s;
+}
+.scroll-top-btn .icono {
+  font-size: 3rem;
+  color: var(--color-gris-oscuro);
+  transition: color ease 0.3s;
+}
+
+.scroll-top-btn:hover {
+  background-color: var(--color-gris-oscuro);
+  box-shadow: 0 0 10px var(--color-primario), 0 0 15px var(--color-primario);
+}
+.scroll-top-btn:hover .icono {
+  color: var(--color-primario);
+}
+
+/* Dark Mode */
+.dark-mode {
+  background-color: var(--color-gris-claro);
+}
+.dark-mode .section__titulo {
+  text-align: center;
+  font-size: 3.4rem;
+  color: var(--color-blanco);
+  font-weight: 400;
+  text-align: center;
+}
+
+.dark-mode .info-eventos-teclado {
+  margin: 4rem 0;
+  padding: 0 1rem;
+  color: var(--color-blanco);
+  font-weight: 400;
+}
+
+.dark-mode-btn {
+  background-color: var(--color-primario);
+  width: 5rem;
+  height: 5rem;
+  position: fixed;
+  z-index: 90;
+  border-radius: 50%;
+  bottom: 1rem;
+  left: 1rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px var(--color-gris-oscuro),
+    0 0 15px var(--color-gris-oscuro);
+
+  cursor: pointer;
+  transition: background-color ease 0.3s, box-shadow ease 0.3s,
+    opacity ease 0.3s, visibility ease 0.3s;
+}
+.dark-mode-btn .icono {
+  font-size: 3rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.dark-mode-btn #icono-sol {
+  color: var(--color-blanco);
+}
+.icono + #icono-luna {
+  color: var(--color-negro);
 }

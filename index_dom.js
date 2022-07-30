@@ -1,5 +1,8 @@
+import { cuentaRegresiva } from "./dom/cuenta_regresiva.js";
+import { darkMode } from "./dom/dark_mode.js";
 import funcionesMenuHamburguer from "./dom/menu_hamburguesa.js";
 import { alarma, relojDigital } from "./dom/reloj_alarma.js";
+import { scrollBtnTop } from "./dom/scroll_top_btn.js";
 import { acortadores, funcionesEventosTeclado } from "./dom/teclado.js";
 
 const d = document;
@@ -9,9 +12,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
   relojDigital(d, "reloj", "iniciar-reloj", "detener-reloj");
   alarma(d, "alarma", "iniciar-alarma", "detener-alarma");
   funcionesEventosTeclado(d, "contenedor-lienzo");
-  // d.addEventListener("click", (e) => {
-  //   console.log(e.target);
-  // });
+  cuentaRegresiva(d, "tiempo", "Sep 27, 2022", "Feliz Cumpleaños!!!");
+  scrollBtnTop(d, "scroll-top-btn");
+  darkMode(d, "dark-mode-btn");
 });
 
 d.addEventListener("keydown", (e) => {
