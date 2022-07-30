@@ -14,9 +14,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
   funcionesEventosTeclado(d, "contenedor-lienzo");
   cuentaRegresiva(d, "tiempo", "Sep 27, 2022", "Feliz Cumpleaños!!!");
   scrollBtnTop(d, "scroll-top-btn");
-  darkMode(d, "dark-mode-btn");
 });
-
+//sacamos la funcion darkMode, ya que necesitamos usar localstorage y se debe ejecutar en un DOMContentLoaded, pero no puede llamarse este metodo dentro del mismo método, por lo tanto sacamos la funcion darkmode del DOMContentLoaded
+darkMode(d, "dark-mode-btn");
 d.addEventListener("keydown", (e) => {
   //Cuando se presiona
 
