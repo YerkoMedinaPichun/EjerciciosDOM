@@ -32,6 +32,11 @@ function hamburguerMenu(d, btnMenu, menu, menuLink) {
 }
 
 function resize(d, contenedorBtnMenu, btnMenu, menu) {
+  const $submenu = d.querySelectorAll(
+    "#sub-menu .contenedor-enlace[data-submenu='1']"
+  );
+  const $otros = d.getElementById("otros");
+  const $menu = d.getElementById("menu");
   window.addEventListener("resize", (e) => {
     if (window.innerWidth >= 768) {
       /*
@@ -47,6 +52,15 @@ function resize(d, contenedorBtnMenu, btnMenu, menu) {
       if (!d.getElementById(menu).classList.contains("menu--encendido")) {
         d.getElementById(menu).classList.add("menu--encendido");
       }
+
+      //-------------
+      // console.log($submenu);
+      // if (d.querySelectorAll("#menu > .contenedor-enlace[data-submenu='1']")) {
+      //   for (let i = 0; i < $submenu.length; i++) {
+      //     $menu.removeChild($submenu[i]);
+      //   }
+      //   $menu.insertAdjacentElement("beforeend", $otros);
+      // }
     }
 
     if (window.innerWidth < 768) {
@@ -75,11 +89,26 @@ function resize(d, contenedorBtnMenu, btnMenu, menu) {
           d.getElementById(btnMenu).classList.add("icono--encendido");
         }
       }
+
+      // if (d.getElementById("otros") !== null) {
+      //   // console.log($menu);
+      //   // console.log($submenu.length);
+      //   // console.log($otros);
+      //   $menu.removeChild($otros);
+      //   for (let i = 0; i < $submenu.length; i++) {
+      //     $menu.insertAdjacentElement("beforeend", $submenu[i]);
+      //   }
+      // }
     }
   });
 }
 
 function configuracionInicial(d, contenedorBtnMenu, menu) {
+  const $submenu = d.querySelectorAll(
+    "#sub-menu .contenedor-enlace[data-submenu='1']"
+  );
+  const $otros = d.getElementById("otros");
+  const $menu = d.getElementById("menu");
   if (window.innerWidth >= 768) {
     if (!d.getElementById(contenedorBtnMenu).classList.contains("ocultar")) {
       d.getElementById(contenedorBtnMenu).classList.add("ocultar");
@@ -90,6 +119,19 @@ function configuracionInicial(d, contenedorBtnMenu, menu) {
       */
     if (!d.getElementById(menu).classList.contains("menu--encendido")) {
       d.getElementById(menu).classList.add("menu--encendido");
+    }
+    if (!d.getElementById("otros")) {
+    }
+  }
+  if (window.innerWidth < 768) {
+    if (d.getElementById("otros") !== null) {
+      // console.log($menu);
+      // console.log($submenu.length);
+      // console.log($otros);
+      $menu.removeChild($otros);
+      for (let i = 0; i < $submenu.length; i++) {
+        $menu.insertAdjacentElement("beforeend", $submenu[i]);
+      }
     }
   }
 }

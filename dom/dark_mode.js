@@ -16,7 +16,6 @@ export function darkMode(d, btnClase) {
   };
 
   d.addEventListener("click", (e) => {
-    console.log(e.target);
     if (
       e.target.matches(`.${btnClase}`) ||
       e.target.matches(`.${btnClase} .icono`)
