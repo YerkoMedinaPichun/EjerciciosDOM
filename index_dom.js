@@ -3,6 +3,7 @@ import { darkMode } from "./dom/dark_mode.js";
 import { menuDesplegable } from "./dom/menu_desplegable.js";
 import funcionesMenuHamburguer from "./dom/menu_hamburguesa.js";
 import responsiveMedia from "./dom/objeto_responsive.js";
+import responsiveTester from "./dom/prueba_responsive.js";
 import { alarma, relojDigital } from "./dom/reloj_alarma.js";
 import { scrollBtnTop } from "./dom/scroll_top_btn.js";
 import { acortadores, funcionesEventosTeclado } from "./dom/teclado.js";
@@ -47,8 +48,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
       <li class="contenedor-enlace"><a class="contenedor-enlace__enlace" href="#seccion-4">Responsive con JS</a></li>
       
 
-    <li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-5">Sección
-              5</a></li><li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-6">Sección
+    <li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-5">Responsive Tester</a></li><li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-6">Sección
               6</a></li><li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-8">Sección
               8</a></li><li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-9">Sección
               9</a></li><li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-10">Sección
@@ -61,8 +61,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
       <li id="otros" class="contenedor-enlace"><a class="contenedor-enlace__enlace">Otros</a>
         <ul id="sub-menu" class="sub-menu hidden">
           <!--  -->
-          <li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-5">Sección
-              5</a></li>
+          <li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-5">Responsive Tester</a></li>
           <li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-6">Sección
               6</a></li>
           <li class="contenedor-enlace" data-submenu="1"><a class="contenedor-enlace__enlace" href="#seccion-8">Sección
@@ -77,6 +76,8 @@ d.addEventListener("DOMContentLoaded", (e) => {
 
     `
   );
+
+  responsiveTester(d, "responsive-tester");
 });
 //sacamos la funcion darkMode, ya que necesitamos usar localstorage y se debe ejecutar en un DOMContentLoaded, pero no puede llamarse este metodo dentro del mismo método, por lo tanto sacamos la funcion darkmode del DOMContentLoaded
 darkMode(d, "dark-mode-btn");
