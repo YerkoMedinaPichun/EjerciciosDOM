@@ -1,6 +1,7 @@
 import { cuentaRegresiva } from "./dom/cuenta_regresiva.js";
 import { darkMode } from "./dom/dark_mode.js";
 import userDeviceInfo from "./dom/deteccion_dispositivos.js";
+import networkStatus from "./dom/deteccion_red.js";
 import { menuDesplegable } from "./dom/menu_desplegable.js";
 import funcionesMenuHamburguer, {
   navAdaptable,
@@ -94,6 +95,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
 });
 //sacamos la funcion darkMode, ya que necesitamos usar localstorage y se debe ejecutar en un DOMContentLoaded, pero no puede llamarse este metodo dentro del mismo método, por lo tanto sacamos la funcion darkmode del DOMContentLoaded
 darkMode(d, "dark-mode-btn");
+networkStatus(d, w, n);
 d.addEventListener("keydown", (e) => {
   //Cuando se presiona
 

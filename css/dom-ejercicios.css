@@ -571,3 +571,22 @@ body {
   grid-column: 2 / 3;
   grid-row: 4 / 5;
 }
+
+/* Conexión */
+
+.online,
+.offline {
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+}
+.offline {
+  background-color: #b71c1c;
+}
