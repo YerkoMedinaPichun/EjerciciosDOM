@@ -5,7 +5,7 @@ export default function webCam(d, n, id) {
     n.mediaDevices
       .getUserMedia({ video: true, audio: false })
       .then((stream) => {
-        console.log(stream);
+        // console.log(stream);
         $video.srcObject = stream;
         $video.play(); //necesario para que no quede como foto, si no como video
       })
@@ -14,7 +14,7 @@ export default function webCam(d, n, id) {
           "beforebegin",
           `<p><mark>Sucedio el siguiente error: ${error}</mark></p>`
         );
-        console.log(`Sucedio el siguiente error: ${error}`);
+        // console.log(`Sucedio el siguiente error: ${error}`);
       });
   }
 }

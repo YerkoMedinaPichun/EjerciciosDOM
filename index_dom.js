@@ -3,6 +3,7 @@ import { darkMode } from "./dom/dark_mode.js";
 import userDeviceInfo from "./dom/deteccion_dispositivos.js";
 import networkStatus from "./dom/deteccion_red.js";
 import webCam from "./dom/deteccion_webcam.js";
+import searchFilters from "./dom/filtro_busquedas.js";
 import getGeolocation from "./dom/geolocalizacion.js";
 import { menuDesplegable } from "./dom/menu_desplegable.js";
 import funcionesMenuHamburguer, {
@@ -96,6 +97,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   userDeviceInfo(d, n, "user-device");
   webCam(d, n, "webcam");
   getGeolocation(d, n, "geolocation");
+  searchFilters(d, ".card-filter", ".card");
 });
 //sacamos la funcion darkMode, ya que necesitamos usar localstorage y se debe ejecutar en un DOMContentLoaded, pero no puede llamarse este metodo dentro del mismo método, por lo tanto sacamos la funcion darkmode del DOMContentLoaded
 darkMode(d, "dark-mode-btn");

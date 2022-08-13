@@ -590,3 +590,39 @@ body {
 .offline {
   background-color: #b71c1c;
 }
+
+/* Filtros de Búsqueda */
+.card-filter {
+  width: 20rem;
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  gap: 2rem;
+}
+.card {
+  background-color: var(--color-primario);
+  color: var(--color-blanco);
+  transition: all 0.3s ease-out;
+  margin: auto;
+}
+.card img {
+  width: 100%;
+  height: auto;
+}
+.card figcaption {
+  padding: 1rem;
+}
+.filter {
+  /* display: none; */
+  visibility: hidden;
+  opacity: 0;
+  /* order: 1; */
+  position: absolute;
+  z-index: -500;
+}

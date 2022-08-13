@@ -34,7 +34,7 @@ export function navAdaptable(d, w, mq, contenedorBtnMenu, btnMenu, menu) {
   /*------------------------------------------- */
   const nav = (e) => {
     if (e.matches) {
-      console.log("desktop");
+      // console.log("desktop");
       if (d.getElementById("otros") !== null) {
         $menu.removeChild($otros);
         for (let i = 0; i < $submenu.length; i++) {
@@ -72,7 +72,7 @@ export function navAdaptable(d, w, mq, contenedorBtnMenu, btnMenu, menu) {
         // console.log($li_enlaces);
       }
     } else {
-      console.log("mobile");
+      // console.log("mobile");
       if (!d.getElementById(contenedorBtnMenu).classList.contains("ocultar")) {
         d.getElementById(contenedorBtnMenu).classList.add("ocultar");
       }
@@ -108,7 +108,7 @@ export function navAdaptable(d, w, mq, contenedorBtnMenu, btnMenu, menu) {
           d.getElementById(btnMenu).classList.add("icono--encendido");
         }
       }
-      console.log(d.getElementById("otros"));
+      // console.log(d.getElementById("otros"));
       if (d.getElementById("otros")) {
         d.getElementById("menu").removeChild(d.getElementById("otros"));
       }
