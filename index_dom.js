@@ -13,6 +13,7 @@ import responsiveMedia from "./dom/objeto_responsive.js";
 import responsiveTester from "./dom/prueba_responsive.js";
 import { alarma, relojDigital } from "./dom/reloj_alarma.js";
 import { scrollBtnTop } from "./dom/scroll_top_btn.js";
+import draw from "./dom/sorteo.js";
 import { acortadores, funcionesEventosTeclado } from "./dom/teclado.js";
 
 const d = document;
@@ -98,6 +99,7 @@ d.addEventListener("DOMContentLoaded", (e) => {
   webCam(d, n, "webcam");
   getGeolocation(d, n, "geolocation");
   searchFilters(d, ".card-filter", ".card");
+  draw(d, "#winner-btn", ".player");
 });
 //sacamos la funcion darkMode, ya que necesitamos usar localstorage y se debe ejecutar en un DOMContentLoaded, pero no puede llamarse este metodo dentro del mismo método, por lo tanto sacamos la funcion darkmode del DOMContentLoaded
 darkMode(d, "dark-mode-btn");
