@@ -1,3 +1,8 @@
+// import dibujarCanvas, {
+//   dibujarTrianguloEquilatero,
+//   TrianguloEquilatero,
+// } from "./dom/canvas.js";
+import { tEquilatero1, medidas } from "./dom/canvas.js";
 import { cuentaRegresiva } from "./dom/cuenta_regresiva.js";
 import { darkMode } from "./dom/dark_mode.js";
 import userDeviceInfo from "./dom/deteccion_dispositivos.js";
@@ -104,6 +109,9 @@ d.addEventListener("DOMContentLoaded", (e) => {
   draw(d, "#winner-btn", ".player");
   funcionesSliderCarrusel();
   contactFormValidations(d);
+  medidas();
+  //dibujarCanvas(d);
+  //dibujarTrianguloEquilatero(d, 100, 350, 200);
 });
 //sacamos la funcion darkMode, ya que necesitamos usar localstorage y se debe ejecutar en un DOMContentLoaded, pero no puede llamarse este metodo dentro del mismo método, por lo tanto sacamos la funcion darkmode del DOMContentLoaded
 darkMode(d, "dark-mode-btn");

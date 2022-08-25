@@ -801,3 +801,12 @@ body {
     opacity: 1;
   }
 }
+.contenedor-canvas {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.canvas {
+  background-color: var(--color-blanco);
+}
