@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CRUD API REST FETCH</title>
+  <!-- Importando Fuentes -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+  <!-- Importando css -->
+  <link rel="stylesheet" href="css/crud.css">
+</head>
+
+<body>
+  <h1>CRUD API REST FETCH</h1>
+  <section class="crud">
+    <article>
+      <h2 class="crud-title">Agregar Personaje</h2>
+      <form class="crud-form">
+        <input type="text" name="nombre" placeholder="nombre" required>
+        <br>
+        <input type="text" name="casa" placeholder="casa" required>
+        <br>
+        <input type="submit" value="Enviar">
+        <input type="hidden" name="id">
+      </form>
+    </article>
+    <article>
+      <h2>Ver Personajes</h2>
+      <table class="crud-table">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Casa</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </article>
+  </section>
+  <template id="crud-template">
+    <tr>
+      <td class="name"></td>
+      <td class="house"></td>
+      <td>
+        <button class="edit">Editar</button>
+        <button class="delete">Eliminar</button>
+      </td>
+    </tr>
+  </template>
+
+  <script src="crud_fetch.js" type="module"></script>
+</body>
+
+</html>

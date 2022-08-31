@@ -1,0 +1,156 @@
+{
+  "alumnos": [
+    {
+      "nombre": "Harry Potter",
+      "casa": "Gryffindor",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "nombre": "Ron Weasley",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 3,
+      "nombre": "Hermione Granger",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 4,
+      "nombre": "Draco Malfoy",
+      "casa": "Slytherin"
+    },
+    {
+      "id": 5,
+      "nombre": "Cedric Diggory",
+      "casa": "Hufflepuff"
+    },
+    {
+      "id": 6,
+      "nombre": "Cho Chang",
+      "casa": "Ravenclaw"
+    },
+    {
+      "id": 7,
+      "nombre": "Neville Longbottom",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 8,
+      "nombre": "Luna Lovegood",
+      "casa": "Ravenclaw"
+    },
+    {
+      "id": 9,
+      "nombre": "Seamus Finnigan",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 10,
+      "nombre": "Dean Thomas",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 11,
+      "nombre": "Padma Patil",
+      "casa": "Ravenclaw"
+    },
+    {
+      "id": 12,
+      "nombre": "Parvati Patil",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 13,
+      "nombre": "Vicent Crabbe",
+      "casa": "Slytherin"
+    },
+    {
+      "id": 14,
+      "nombre": "Gregory Goyle",
+      "casa": "Slytherin"
+    },
+    {
+      "id": 15,
+      "nombre": "Pansy Parkinson",
+      "casa": "Slytherin"
+    },
+    {
+      "id": 16,
+      "nombre": "Fred Weasley",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 17,
+      "nombre": "George Weasley",
+      "casa": "Gryffindor"
+    },
+    {
+      "nombre": "Ginny Weasley",
+      "casa": "Gryffindor",
+      "id": 18
+    }
+  ],
+  "maestros": [
+    {
+      "id": 1,
+      "nombre": "Albus Dumbledore",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 2,
+      "nombre": "Severus Snape",
+      "casa": "Slytherin"
+    },
+    {
+      "id": 3,
+      "nombre": "Filius Flitwick",
+      "casa": "Ravenclaw"
+    },
+    {
+      "id": 4,
+      "nombre": "Pomona Sprout",
+      "casa": "Hufflepuff"
+    },
+    {
+      "id": 5,
+      "nombre": "Minerva Mcgonagall",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 6,
+      "nombre": "Horace Slughorn",
+      "casa": "Slytherin"
+    },
+    {
+      "id": 7,
+      "nombre": "Rubeus Hagrid",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 8,
+      "nombre": "Quirinus Quirrel",
+      "casa": "Ravenclaw"
+    },
+    {
+      "id": 9,
+      "nombre": "Remus Lupin",
+      "casa": "Gryffindor"
+    },
+    {
+      "id": 10,
+      "nombre": "Gilderoy Lockhart",
+      "casa": "Ravenclaw"
+    },
+    {
+      "id": 11,
+      "nombre": "Alastor Moody",
+      "casa": "Ravenclaw"
+    },
+    {
+      "id": 12,
+      "nombre": "Dolores Umbridge",
+      "casa": "Slytherin"
+    }
+  ]
+}
