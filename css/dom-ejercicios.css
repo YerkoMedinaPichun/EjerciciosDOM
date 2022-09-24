@@ -821,10 +821,11 @@ body {
   position: relative;
 }
 .circuito {
-  width: 50rem;
-  height: 50rem;
+  width: 60rem;
+  height: 60rem;
   position: absolute;
   background-color: #161616;
+  /* border-radius: 50%; */
 }
 .circuito::after {
   content: "";
@@ -834,8 +835,8 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50rem;
-  height: 50rem;
+  width: 60rem;
+  height: 60rem;
 }
 .circuito::before {
   content: "";
@@ -846,28 +847,39 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  border: 1rem solid #00ffff;
-  animation: animate 10s ease-in-out infinite;
+  animation: animate 4s ease infinite;
 }
 @keyframes animate {
   0% {
-    box-shadow: 0rem 0rem 15px #00ffff, 0rem 0rem 20px #00ffff,
+    width: 1px;
+    height: 1px;
+    border: 0.5rem solid #00ffff;
+  }
+  45% {
+    border-radius: 50%;
+  }
+  50% {
+    border: 2rem solid #00ffff;
+    box-shadow: inset 0rem 0rem 15px #00ffff, inset 0rem 0rem 20px #00ffff,
+      inset 0rem 0rem 25px #00ffff;
+
+    /* box-shadow: 0rem 0rem 15px #00ffff, 0rem 0rem 20px #00ffff,
       0rem 0rem 25px #00ffff, inset 0rem 0rem 15px #00ffff,
-      inset 0rem 0rem 20px #00ffff, inset 0rem 0rem 25px #00ffff;
-    width: 0%;
-    height: 0%;
-  }
-  25% {
-    width: 100%;
-    height: 100%;
-  }
-  30% {
-    box-shadow: none;
+      inset 0rem 0rem 20px #00ffff, inset 0rem 0rem 25px #00ffff; */
   }
   100% {
     width: 100%;
     height: 100%;
+    box-shadow: none;
+    border: 0.5rem solid #00ffff;
+    border-radius: 0%;
   }
+
+  /* 100% {
+    border: none;
+    width: 0%;
+    height: 0%;
+  } */
 }
 .logo {
   width: 8rem;
