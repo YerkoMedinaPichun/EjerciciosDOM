@@ -28,17 +28,18 @@
       align-items: center;
     }
 
-    .links a {
+    .links a .icono {
       text-decoration: none;
       color: #373737;
+
       font-size: 3rem;
-      color: #373737;
+      cursor: pointer;
       display: grid;
       grid-area: center;
       border-radius: 50%;
     }
 
-    .links a:hover {
+    .links a .icono:hover {
       color: #777;
       scale: 1.1;
     }
@@ -51,7 +52,8 @@
   <main class="grid-fluid">
 
   </main>
-  <script src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
   <script>
     const d = document,
       $main = d.querySelector("main"),
@@ -79,7 +81,7 @@
               pokemon = await res.json();
             //console.log(res, pokemon)
             if (!res.ok) throw { status: res.status, statusText: res.statusText }
-            console.log(pokemon);
+            //console.log(pokemon);
             $template += `
             <figure>
                 <img src="${pokemon.sprites.front_default}" alt="${pokemon.name}">
@@ -97,8 +99,8 @@
           }
         }
         $main.innerHTML = $template;
-        $prevLink = json.previous ? `<a class="previous" href="${json.previous}"> <ion-icon name="arrow-dropleft-circle"></ion-icon> </a>` : "";
-        $nextLink = json.next ? `<a class="next" href="${json.next}">  <ion-icon name="arrow-dropright-circle"></ion-icon></a>` : "";
+        $prevLink = json.previous ? `<a class="previous" data-href="${json.previous}"> <ion-icon class="icono" name="arrow-back-circle-outline"></ion-icon> </a>` : "";
+        $nextLink = json.next ? `<a class="next" data-href="${json.next}">  <ion-icon class="icono" name="arrow-forward-circle-outline"></ion-icon></a>` : "";
         $links.innerHTML = $prevLink + " " + $nextLink;
 
 
@@ -113,18 +115,22 @@
 
     d.addEventListener("click", e => {
 
-      if (e.target.matches(".links a")) {
+      if (e.target.matches(".links a *")) {
         e.preventDefault();
-        loadPokemons(e.target.getAttribute("href"));
+        e.stopPropagation();
+        console.log(e.target.parentElement.dataset.href);
+        //console.log(e.target.getAttribute("href"));
+        loadPokemons(e.target.parentElement.dataset.href);
       }
-      if (e.target.matches(".links .previous *")) {
-        e.preventDefault();
-        loadPokemons(d.querySelector(".previous").getAttribute("href"));
-      }
-      if (e.target.matches(".links .next *")) {
-        e.preventDefault();
-        loadPokemons(d.querySelector(".next").getAttribute("href"));
-      }
+
+      // if (e.target.matches(".links .previous *")) {
+      //   e.preventDefault();
+      //   loadPokemons(d.querySelector(".previous").getAttribute("href"));
+      // }
+      // if (e.target.matches(".links .next *")) {
+      //   e.preventDefault();
+      //   loadPokemons(d.querySelector(".next").getAttribute("href"));
+      // }
     });
 
   </script>
