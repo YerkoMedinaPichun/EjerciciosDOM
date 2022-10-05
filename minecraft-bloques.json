@@ -1,0 +1,720 @@
+{
+  "blocks": [
+    {
+      "id": 0,
+      "idMC": "minecraft:air",
+      "name": "air",
+      "nameES": "aire"
+    },
+    {
+      "id": 1,
+      "idMC": "minecraft:stone",
+      "name": "stone",
+      "nameES": "piedra",
+      "tags": [
+        "moss_replaceable",
+        "sculk_replaceable_world_gen",
+        "stone_ore_replaceables",
+        "nether_carver_replaceables",
+        "snaps_goat_horn",
+        "overworld_carver_replaceables",
+        "lush_ground_replaceables",
+        "dripstone_replaceable_blocks",
+        "base_stone_overworld",
+        "azalea_root_replaceable",
+        "goats_spawnable_on",
+        "sculk_replaceable",
+        "mineable/pickaxe"
+      ]
+    },
+    {
+      "id": 2,
+      "idMC": "minecraft:granite",
+      "name": "granite",
+      "nameES": "granito",
+      "tags": [
+        "mineable/pickaxe",
+        "nether_carver_replaceables",
+        "overworld_carver_replaceables",
+        "dripstone_replaceable_blocks",
+        "base_stone_overworld",
+        "azalea_root_replaceable",
+        "moss_replaceable",
+        "lush_ground_replaceables",
+        "stone_ore_replaceables",
+        "sculk_replaceable_world_gen",
+        "sculk_replaceable"
+      ]
+    },
+    {
+      "id": "1:2",
+      "name": "polished_granite",
+      "nameES": "granito pulido",
+      "tags": [
+        "mineable/pickaxe"
+      ]
+    },
+    {
+      "id": "1:3",
+      "name": "diorite",
+      "nameES": "diorita",
+      "tags": [
+        "mineable/pickaxe",
+        "nether_carver_replaceables",
+        "overworld_carver_replaceables",
+        "dripstone_replaceable_blocks",
+        "base_stone_overworld",
+        "azalea_root_replaceable",
+        "moss_replaceable",
+        "lush_ground_replaceables",
+        "stone_ore_replaceables",
+        "sculk_replaceable_world_gen",
+        "sculk_replaceable"
+      ]
+    },
+    {
+      "id": "1:4",
+      "name": "polished_diorite",
+      "nameES": "diorita pulida",
+      "tags": [
+        "mineable/pickaxe"
+      ]
+    },
+    {
+      "id": "1:5",
+      "name": "andesite",
+      "nameES": "andesita",
+      "tags": [
+        "mineable/pickaxe",
+        "nether_carver_replaceables",
+        "overworld_carver_replaceables",
+        "dripstone_replaceable_blocks",
+        "base_stone_overworld",
+        "azalea_root_replaceable",
+        "moss_replaceable",
+        "lush_ground_replaceables",
+        "stone_ore_replaceables",
+        "sculk_replaceable_world_gen",
+        "sculk_replaceable"
+      ]
+    },
+    {
+      "id": "1:6",
+      "name": "polished_andesite",
+      "nameES": "andesita pulida",
+      "tags": [
+        "mineable/pickaxe"
+      ]
+    },
+    {
+      "id": "2",
+      "name": "grass_block",
+      "nameES": "césped",
+      "snowy": [
+        true,
+        false
+      ],
+      "tags": [
+        "wolves_spawnable_on",
+        "foxes_spawnable_on",
+        "parrots_spawnable_on",
+        "overworld_carver_replaceables",
+        "azalea_root_replaceable",
+        "dead_bush_may_place_on",
+        "rabbits_spawnable_on",
+        "bamboo_plantable_on",
+        "frogs_spawnable_on",
+        "moss_replaceable",
+        "lush_ground_replaceables",
+        "enderman_holdable",
+        "valid_spawn",
+        "dirt",
+        "sculk_replaceable_world_gen",
+        "nether_carver_replaceables",
+        "big_dripleaf_placeable",
+        "mineable/shovel",
+        "animals_spawnable_on",
+        "azalea_grows_on",
+        "sculk_replaceable"
+      ]
+    },
+    {
+      "id": "3",
+      "name": "dirt",
+      "nameES": "tierra",
+      "tags": [
+        "nether_carver_replaceables",
+        "convertable_to_mud",
+        "dirt",
+        "sculk_replaceable",
+        "sculk_replaceable_world_gen",
+        "moss_replaceable",
+        "azalea_grows_on",
+        "enderman_holdable",
+        "overworld_carver_replaceables",
+        "azalea_root_replaceable",
+        "dead_bush_may_place_on",
+        "big_dripleaf_placeable",
+        "mineable/shovel",
+        "lush_ground_replaceables",
+        "bamboo_plantable_on"
+      ]
+    },
+    {
+      "id": "3:1",
+      "name": "coarse_dirt",
+      "nameES": "tierra estéril",
+      "tags": [
+        "overworld_carver_replaceables",
+        "sculk_replaceable_world_gen",
+        "lush_ground_replaceables",
+        "azalea_grows_on",
+        "bamboo_plantable_on",
+        "mineable/shovel",
+        "enderman_holdable",
+        "dirt",
+        "convertable_to_mud",
+        "foxes_spawnable_on",
+        "dead_bush_may_place_on",
+        "nether_carver_replaceables",
+        "azalea_root_replaceable",
+        "moss_replaceable",
+        "sculk_replaceable",
+        "big_dripleaf_placeable"
+      ]
+    },
+    {
+      "id": "3:2",
+      "name": "podzol",
+      "nameES": "podsol",
+      "snowy": [
+        true,
+        false
+      ],
+      "tags": [
+        "azalea_root_replaceable",
+        "foxes_spawnable_on",
+        "dirt",
+        "bamboo_plantable_on",
+        "mineable/shovel",
+        "valid_spawn",
+        "moss_replaceable",
+        "enderman_holdable",
+        "sculk_replaceable_world_gen",
+        "mushroom_grown_block",
+        "nether_carver_replaceables",
+        "overworld_carver_replaceables",
+        "lush_ground_replaceables",
+        "sculk_replaceable",
+        "big_dripleaf_placeable",
+        "dead_bush_may_place_on",
+        "azalea_grows_on"
+      ]
+    },
+    {
+      "id": "4",
+      "name": "cobblestone",
+      "nameES": "roca",
+      "tags": [
+        "mineable/pickaxe"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "oak_planks",
+      "nameES": "tablones de roble",
+      "tags": [
+        "mineable/axe",
+        "planks"
+      ]
+    },
+    {
+      "id": "5:1",
+      "name": "spruce_planks",
+      "nameES": "tablones de abeto",
+      "tags": [
+        "mineable/axe",
+        "planks"
+      ]
+    },
+    {
+      "id": "5:2",
+      "name": "birch_planks",
+      "nameES": "tablones de abedul",
+      "tags": [
+        "mineable/axe",
+        "planks"
+      ]
+    },
+    {
+      "id": "5:3",
+      "name": "jungle_planks",
+      "nameES": "tablones de jungla",
+      "tags": [
+        "mineable/axe",
+        "planks"
+      ]
+    },
+    {
+      "id": "5:4",
+      "name": "acacia_planks",
+      "nameES": "tablones de acacia",
+      "tags": [
+        "mineable/axe",
+        "planks"
+      ]
+    },
+    {
+      "id": "5:5",
+      "name": "dark_oak_planks",
+      "nameES": "tablones de roble oscuro",
+      "tags": [
+        "mineable/axe",
+        "planks"
+      ]
+    },
+    {
+      "id": "6",
+      "name": "oak_sapling",
+      "nameES": "brote de roble",
+      "stage": [
+        0,
+        1
+      ],
+      "tags": [
+        "mineable/axe",
+        "saplings"
+      ]
+    },
+    {
+      "id": "6:1",
+      "name": "spruce_sapling",
+      "nameES": "brote de abeto",
+      "stage": [
+        0,
+        1
+      ],
+      "tags": [
+        "mineable/axe",
+        "saplings"
+      ]
+    },
+    {
+      "id": "6:2",
+      "name": "birch_sapling",
+      "nameES": "brote de abedul",
+      "stage": [
+        0,
+        1
+      ],
+      "tags": [
+        "mineable/axe",
+        "saplings"
+      ]
+    },
+    {
+      "id": "6:3",
+      "name": "jungle_sapling",
+      "nameES": "brote de jungla",
+      "stage": [
+        0,
+        1
+      ],
+      "tags": [
+        "mineable/axe",
+        "saplings"
+      ]
+    },
+    {
+      "id": "6:4",
+      "name": "acacia_sapling",
+      "nameES": "brote de acacia",
+      "stage": [
+        0,
+        1
+      ],
+      "tags": [
+        "mineable/axe",
+        "saplings"
+      ]
+    },
+    {
+      "id": "6:5",
+      "name": "dark_oak_sapling",
+      "nameES": "brote de roble oscuro",
+      "stage": [
+        0,
+        1
+      ],
+      "tags": [
+        "mineable/axe",
+        "saplings"
+      ]
+    },
+    {
+      "id": "7",
+      "name": "bedrock",
+      "nameES": "biedra base",
+      "tags": [
+        "infiniburn_end",
+        "dragon_immune",
+        "wither_immune",
+        "geode_invalid_blocks",
+        "lava_pool_stone_cannot_replace",
+        "features_cannot_replace"
+      ]
+    },
+    {
+      "id": "8",
+      "name": "water",
+      "nameES": "agua",
+      "falling": [
+        true,
+        false
+      ],
+      "tags": [
+        "water"
+      ]
+    },
+    {
+      "id": "8:1",
+      "name": "flowing_water",
+      "nameES": "agua que fluye",
+      "falling": [
+        true,
+        false
+      ],
+      "level": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "tags": [
+        "water"
+      ]
+    },
+    {
+      "id": "9",
+      "name": "water",
+      "nameES": "agua",
+      "falling": [
+        true,
+        false
+      ],
+      "tags": [
+        "water"
+      ]
+    },
+    {
+      "id": "10",
+      "name": "lava",
+      "nameES": "lava",
+      "falling": [
+        true,
+        false
+      ],
+      "tags": [
+        "lava"
+      ]
+    },
+    {
+      "id": "10:1",
+      "name": "flowing_lava",
+      "nameES": "lava que fluye",
+      "falling": [
+        true,
+        false
+      ],
+      "level": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "tags": [
+        "lava"
+      ]
+    },
+    {
+      "id": "11",
+      "name": "lava",
+      "nameES": "lava",
+      "falling": [
+        true,
+        false
+      ],
+      "tags": [
+        "lava"
+      ]
+    },
+    {
+      "id": "12",
+      "name": "sand",
+      "nameES": "arena",
+      "tags": [
+        "rabbits_spawnable_on",
+        "lush_ground_replaceables",
+        "sand",
+        "dead_bush_may_place_on",
+        "enderman_holdable",
+        "sculk_replaceable_world_gen",
+        "azalea_grows_on",
+        "bamboo_plantable_on",
+        "overworld_carver_replaceables",
+        "mineable/shovel",
+        "azalea_root_replaceable",
+        "sculk_replaceable"
+      ]
+    },
+    {
+      "id": "12:1",
+      "name": "red_sand",
+      "nameES": "arena roja",
+      "tags": [
+        "dead_bush_may_place_on",
+        "sand",
+        "azalea_grows_on",
+        "enderman_holdable",
+        "mineable/shovel",
+        "sculk_replaceable_world_gen",
+        "sculk_replaceable",
+        "bamboo_plantable_on",
+        "overworld_carver_replaceables",
+        "azalea_root_replaceable"
+      ]
+    },
+    {
+      "id": "13",
+      "name": "gravel",
+      "nameES": "grava",
+      "tags": [
+        "bamboo_plantable_on",
+        "sculk_replaceable_world_gen",
+        "mineable/shovel",
+        "azalea_root_replaceable",
+        "lush_ground_replaceables",
+        "overworld_carver_replaceables",
+        "goats_spawnable_on",
+        "enderman_holdable",
+        "sculk_replaceable"
+      ]
+    },
+    {
+      "id": "14",
+      "name": "gold_ore",
+      "nameES": "mena de oro",
+      "tags": [
+        "needs_iron_tool",
+        "gold_ores",
+        "mineable/pickaxe",
+        "guarded_by_piglins"
+      ]
+    },
+    {
+      "id": "15",
+      "name": "iron_ore",
+      "nameES": "mena de hierro",
+      "tags": [
+        "mineable/pickaxe",
+        "needs_stone_tool",
+        "overworld_carver_replaceables",
+        "iron_ores"
+      ]
+    },
+    {
+      "id": "16",
+      "name": "coal_ore",
+      "nameES": "mena de carbon",
+      "tags": [
+        "snaps_goat_horn",
+        "mineable/pickaxe",
+        "coal_ores"
+      ]
+    },
+    {
+      "id": "17",
+      "name": "oak_log",
+      "nameES": "tronco de roble",
+      "axis": [
+        "x",
+        "y",
+        "z"
+      ],
+      "tags": [
+        "overworld_natural_logs",
+        "logs_that_burn",
+        "snaps_goat_horn",
+        "completes_find_tree_tutorial",
+        "parrots_spawnable_on",
+        "logs",
+        "lava_pool_stone_cannot_replace",
+        "mineable/axe"
+      ]
+    },
+    {
+      "id": "17:1",
+      "name": "spruce_log",
+      "nameES": "tronco de abeto",
+      "axis": [
+        "x",
+        "y",
+        "z"
+      ],
+      "tags": [
+        "overworld_natural_logs",
+        "logs_that_burn",
+        "snaps_goat_horn",
+        "completes_find_tree_tutorial",
+        "parrots_spawnable_on",
+        "logs",
+        "lava_pool_stone_cannot_replace",
+        "mineable/axe"
+      ]
+    },
+    {
+      "id": "17:2",
+      "name": "birch_log",
+      "nameES": "tronco de abedul",
+      "axis": [
+        "x",
+        "y",
+        "z"
+      ],
+      "tags": [
+        "overworld_natural_logs",
+        "logs_that_burn",
+        "snaps_goat_horn",
+        "completes_find_tree_tutorial",
+        "parrots_spawnable_on",
+        "logs",
+        "lava_pool_stone_cannot_replace",
+        "mineable/axe"
+      ]
+    },
+    {
+      "id": "17:3",
+      "name": "jungle_log",
+      "nameES": "tronco de jungla",
+      "axis": [
+        "x",
+        "y",
+        "z"
+      ],
+      "tags": [
+        "overworld_natural_logs",
+        "logs_that_burn",
+        "snaps_goat_horn",
+        "completes_find_tree_tutorial",
+        "parrots_spawnable_on",
+        "logs",
+        "lava_pool_stone_cannot_replace",
+        "mineable/axe"
+      ]
+    },
+    {
+      "id": "17:4",
+      "name": "oak_log",
+      "nameES": "tronco de roble",
+      "axis": [
+        "x",
+        "y",
+        "z"
+      ],
+      "tags": [
+        "overworld_natural_logs",
+        "logs_that_burn",
+        "snaps_goat_horn",
+        "completes_find_tree_tutorial",
+        "parrots_spawnable_on",
+        "logs",
+        "lava_pool_stone_cannot_replace",
+        "mineable/axe"
+      ]
+    },
+    {
+      "id": "17:5",
+      "name": "oak_log",
+      "nameES": "tronco de roble",
+      "axis": [
+        "x",
+        "y",
+        "z"
+      ],
+      "tags": [
+        "overworld_natural_logs",
+        "logs_that_burn",
+        "snaps_goat_horn",
+        "completes_find_tree_tutorial",
+        "parrots_spawnable_on",
+        "logs",
+        "lava_pool_stone_cannot_replace",
+        "mineable/axe"
+      ]
+    }
+  ],
+  "tags": [
+    {
+      "id": 0,
+      "name": "moss_replaceable"
+    },
+    {
+      "id": 1,
+      "name": "sculk_replaceable_world_gen"
+    },
+    {
+      "id": 2,
+      "name": "stone_ore_replaceables"
+    },
+    {
+      "name": "nether_carver_replaceables",
+      "id": 3
+    },
+    {
+      "name": "snaps_goat_horn",
+      "id": 4
+    },
+    {
+      "name": "overworld_carver_replaceables",
+      "id": 5
+    },
+    {
+      "name": "lush_ground_replaceables",
+      "id": 6
+    },
+    {
+      "name": "dripstone_replaceable_blocks",
+      "id": 7
+    },
+    {
+      "name": "base_stone_overworld",
+      "id": 8
+    },
+    {
+      "name": "azalea_root_replaceable",
+      "id": 9
+    },
+    {
+      "name": "goats_spawnable_on",
+      "id": 10
+    },
+    {
+      "name": "sculk_replaceable",
+      "id": 11
+    },
+    {
+      "name": "mineable/axe",
+      "id": 12
+    }
+  ]
+}

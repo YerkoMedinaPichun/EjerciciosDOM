@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minecraft Bloques 1.19</title>
+
+  <!-- Importando Fuentes -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+    rel="stylesheet">
+
+
+  <!-- Importando css -->
+
+  <link rel="stylesheet" href="minecraft-bloques.css">
+</head>
+
+<body>
+  <h1>Minecraft Bloques 1.19</h1>
+  <section class="crud">
+    <h2 class="crud-title">
+      Agregar Bloque
+    </h2>
+    <form class="crud-form crud-form-block">
+      <input class="input" type="text" name="id" placeholder="id" required>
+      <input class="input" type="text" name="idMC" placeholder="idMC" required>
+      <input class="input" type="text" name="name" placeholder="name" required>
+      <input class="input" type="text" name="nameES" placeholder="nameES" id="nameES" required>
+      <input class="input elemento-principal" type="submit" value="Enviar">
+      <input type="hidden" name="id">
+
+      <!-- <div class="opcion">
+        <p data-name="moss_replaceable">moss_replaceable</p>
+        <div class="contenedor-checkbox">
+          <input type="checkbox">
+          <span class="check"></span>
+        </div>
+      </div> -->
+
+    </form>
+    <template id="option-tag">
+      <div class="opcion">
+        <p class="option-name"></p>
+        <div class="contenedor-checkbox">
+          <input type="checkbox">
+          <span class="check"></span>
+        </div>
+      </div>
+    </template>
+    <!-- =================================================== -->
+
+    <h2 class="crud-title-options">Agregar Opciones</h2>
+    <form class="crud-form crud-form-options">
+
+      <input class="input" type="text" name="name" placeholder="name" required>
+
+      <input class="input elemento-principal" type="submit" value="Enviar">
+      <input type="hidden" name="id">
+
+    </form>
+
+    <!-- =================================================== -->
+
+    <article>
+      <h2>Ver Opciones</h2>
+      <table class="crud-table-options">
+        <thead>
+          <tr>
+            <th>Nombre</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+      </table>
+    </article>
+
+  </section>
+
+  <!-- =================================================== -->
+
+  <template id="crud-template-options">
+    <tr>
+
+      <td class="name-option"></td>
+      <td>
+        <button class="edit-option">Editar</button>
+        <button class="delete-option">Eliminar</button>
+      </td>
+    </tr>
+  </template>
+  </section>
+
+  <script src="minecraft-bloques.js" type="module"></script>
+</body>
+
+</html>
