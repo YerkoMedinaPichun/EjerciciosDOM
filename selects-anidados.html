@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Selects anidados</title>
+</head>
+
+<body>
+  <h1>Select anidados</h1>
+
+  <h2>Chile</h2>
+
+  <label for="select-primary">Regiones</label>
+  <select name="primary" id="select-primary">
+    <option value="">Elige una región</option>
+  </select>
+  <p></p>
+
+
+  <label for="select-secondadry">Comunas</label>
+  <select name="secondary" id="select-secondary">
+    <option value="">Elige una comuna</option>
+  </select>
+  <p></p>
+</body>
+
+<script>
+  const d = document,
+    $selectPrimary = d.getElementById("select-primary"),
+    $selectSecondary = d.getElementById("select-secondary");
+
+
+  function loadRegiones() {
+    fetch("regiones-chile.json")
+      .then(res => res.ok ? res.json() : Promise.reject(res))
+      .then(json => {
+        console.log(json.regions)
+        console.log(json.regions[13].communes)
+        //console.log()
+        let $options = `<option value="">Elige una región</option>`;
+        json.regions.forEach(el => {
+          $options += `<option value="${el.number}" id="${el.number}">${el.name}</option>`;
+        })
+
+        $selectPrimary.innerHTML = $options;
+      })
+      .catch(error => {
+        console.log(error);
+        let message = error.statusText || "Ocurrió un error";
+        $selectPrimary.nextElementSibling.innerHTML = `Error: ${error.status}: ${message}`;
+      })
+
+  }
+
+
+  function loadComunas(region) {
+    fetch("regiones-chile.json")
+      .then(res => res.ok ? res.json() : Promise.reject(res))
+      .then(json => {
+        console.log(region);
+        let $options = `<option value="">Elige una comuna</option>`;
+
+        json.regions[region - 1].communes.forEach(el => {
+          $options += `<option value="${el.name}">${el.name}</option>`;
+        })
+
+        $selectSecondary.innerHTML = $options;
+      })
+      .catch(error => {
+        console.log(error);
+        let message = error.statusText || "Ocurrió un error";
+        $selectSecondary.nextElementSibling.innerHTML = `Error: ${error.status}: ${message}`;
+      })
+  }
+
+  d.addEventListener("DOMContentLoaded", loadRegiones());
+
+  $selectPrimary.addEventListener("change", async e => {
+    // console.log(e.target.value);
+    loadComunas(e.target.value)
+  });
+
+</script>
+
+</html>

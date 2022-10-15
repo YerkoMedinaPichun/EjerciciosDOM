@@ -1,3 +1,4 @@
+
 {
   "blocks": [
     {
@@ -715,6 +716,10 @@
     {
       "name": "mineable/pickaxe",
       "id": 12
+    },
+    {
+      "name": "mineable/axe",
+      "id": 13
     }
   ]
 }

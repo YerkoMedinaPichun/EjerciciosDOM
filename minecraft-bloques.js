@@ -8,7 +8,8 @@ const d = document,
 const $templateOptionTag = d.getElementById("option-tag").content,
   $fragmentOptionTag = d.createDocumentFragment();
 
-let options;
+let options,
+  formOptions = [];
 
 // const ajax = (options) => {
 //   let { url, method, success, error, data } = options;
@@ -31,13 +32,15 @@ let options;
 //   xhr.send(JSON.stringify(data));
 // };
 
-const getAllOptionsFetch = async () => {
+const getAllOptionsFetch = async (valueOption = "") => {
   try {
     let res = await fetch("http://localhost:5555/tags"),
       json = await res.json();
 
     if (!res.ok) throw { status: res.status, statusText: res.statusText };
+
     json.forEach((el) => {
+      formOptions.push(el.name);
       $template.querySelector(".name-option").textContent = el.name;
 
       $template.querySelector(".edit-option").dataset.id = el.id;
@@ -45,6 +48,8 @@ const getAllOptionsFetch = async () => {
 
       $template.querySelector(".delete-option").dataset.id = el.id;
       $template.querySelector(".delete-option").dataset.name = el.name;
+
+      $template.querySelector(".container-name-option").dataset.name = el.name;
 
       // =======================
 
@@ -109,11 +114,21 @@ const getAllOptionsFetch = async () => {
 //   });
 // };
 
-d.addEventListener("DOMContentLoaded", getAllOptionsFetch);
+d.addEventListener("DOMContentLoaded", getAllOptionsFetch());
 
 d.addEventListener("submit", async (e) => {
   if (e.target === $formOptions) {
     e.preventDefault();
+
+    for (let i = 0; i < formOptions.length; i++) {
+      if (e.target.name.value === formOptions[i]) {
+        alert(
+          `No puedes agregar la opción "${e.target.name.value}", porque ya existe`
+        );
+        e.target.name.value = "";
+        return;
+      }
+    }
 
     if (!e.target.id.value) {
       try {
@@ -204,6 +219,7 @@ d.addEventListener("click", async (e) => {
     $titleOption.textContent = "Editar Opción";
     $formOptions.name.value = e.target.dataset.name;
     $formOptions.id.value = e.target.dataset.id;
+    location.href = "#crud-form-options";
   }
   if (e.target.matches(".delete-option")) {
     let isDelete = confirm(

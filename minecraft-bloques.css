@@ -225,3 +225,6 @@ table tr:nth-child(even) {
     grid-column: 1 / 4;
   }
 }
+.none {
+  display: none;
+}
