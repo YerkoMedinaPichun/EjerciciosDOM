@@ -9,8 +9,7 @@ html {
 *:after {
   box-sizing: inherit;
 }
-body {
-}
+
 a {
   color: #01579b;
   transition: color 0.3s ease;
@@ -38,6 +37,7 @@ img {
   display: block;
   width: 4rem;
   height: 4rem;
+  margin-bottom: 4rem;
 }
 .form-search {
   margin: auto;

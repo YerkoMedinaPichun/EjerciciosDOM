@@ -6,7 +6,7 @@ export function SearchCard(props) {
     ? _embedded.self[0].featured_media_src_url
     : "/spa/app/assets/imagen-no-disponible.jpg";
 
-  console.log(_embedded.self[0].featured_media_src_url);
+  // console.log(_embedded.self[0].featured_media_src_url);
 
   return `
     <article class="post-card">
